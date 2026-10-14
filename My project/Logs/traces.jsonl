@@ -1,0 +1,8 @@
+{"ts":"2026-10-12T23:19:23.019Z","pid":95726,"component":"relay","name":"log","kind":"log","level":"debug","spanId":"6dac594234bd4de8","data":{"message":"Relay->Editor communication is blocked"}}
+{"ts":"2026-10-12T23:19:23.028Z","pid":95726,"component":"relay","name":"acp.queue.pause","kind":"event","level":"debug","spanId":"f4f672e5abc74679","data":{"depth":0}}
+{"ts":"2026-10-12T23:19:23.029Z","pid":95726,"component":"relay","name":"log","kind":"log","level":"info","spanId":"6fd2c6b55a254725","data":{"message":"Client disconnected - blocking and caching for recovery"}}
+{"ts":"2026-10-12T23:19:23.030Z","pid":95726,"component":"relay","name":"connection.lost","kind":"event","level":"warn","spanId":"232e8dc7834249ed","data":{"clientId":null}}
+{"ts":"2026-10-12T23:19:23.030Z","pid":95726,"component":"relay","name":"log","kind":"log","level":"warn","spanId":"9b928d7e2de04933","data":{"message":"Client disconnected - sessions will persist until auto-shutdown, reason: Client disconnected"}}
+{"ts":"2026-10-12T23:19:23.032Z","pid":95726,"component":"relay","name":"log","kind":"log","level":"info","spanId":"f4cb2476f58249de","data":{"message":"Auto-shutdown timer started due to client disconnection"}}
+{"ts":"2026-10-12T23:22:23.032Z","pid":95726,"component":"relay","name":"log","kind":"log","level":"info","spanId":"4327769dbb1743e5","data":{"message":"Auto-shutdown timer fired after 180s inactivity, shutting down: Dedicated client disconnected"}}
+{"ts":"2026-10-12T23:22:23.035Z","pid":95726,"component":"relay","name":"log","kind":"log","level":"info","spanId":"e5330da6883a481c","data":{"message":"Shutdown: Initiating graceful shutdown: Dedicated client disconnected"}}
