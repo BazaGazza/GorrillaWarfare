@@ -5,6 +5,7 @@ public class GridPlayerController : MonoBehaviour
     [Header("Grid Position")]
     public Vector2Int gridPosition = new Vector2Int(0, 0); // Starting cell (0,0)
     public const int BOARD_SIZE = 8;
+    public const double ActionDelay = 0.0;
 
     void Start()
     {
