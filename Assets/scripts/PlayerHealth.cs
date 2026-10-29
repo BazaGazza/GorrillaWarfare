@@ -69,5 +69,9 @@ public class PlayerHealth : MonoBehaviour
         
         // TODO: Trigger Game Over screen or reload level
         // Example: GameOverManager.Instance.ShowGameOver();
+         if (GameOverManager.Instance != null)
+        {
+            GameOverManager.Instance.ShowGameOver();
+        }
     }
 }

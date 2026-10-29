@@ -6,12 +6,8 @@ public class HealthUI : MonoBehaviour
 {
     public static HealthUI Instance;
 
-    [Header("Heart Sprites")]
-    public Sprite fullHeartSprite;
-    public Sprite emptyHeartSprite;
-
     [Header("Heart UI References")]
-    public List<Image> heartImages; // Drag your 3 Heart UI Images here in Inspector
+    public List<Image> heartImages = new List<Image>();
 
     private void Awake()
     {
@@ -19,27 +15,30 @@ public class HealthUI : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    // Updates heart sprites based on current player HP
     public void UpdateHearts(int currentHP, int maxHP)
     {
+        // 1. Check if the list was assigned in the Inspector
+        if (heartImages == null || heartImages.Count == 0)
+        {
+            Debug.LogError("[HealthUI] 'heartImages' list is empty in the Inspector! Drag your heart UI images into the list.");
+            return;
+        }
+
+        Debug.Log($"[HealthUI] Updating UI -> Current HP: {currentHP}. Total Heart Objects in list: {heartImages.Count}");
+
         for (int i = 0; i < heartImages.Count; i++)
         {
-            if (i < currentHP)
+            bool shouldBeActive = (i < currentHP);
+
+            if (heartImages[i] != null)
             {
-                // Show full heart sprite
-                heartImages[i].sprite = fullHeartSprite;
-                heartImages[i].enabled = true;
-            }
-            else if (i < maxHP)
-            {
-                // Show empty heart sprite
-                heartImages[i].sprite = emptyHeartSprite;
-                heartImages[i].enabled = true;
+                // Disable/Enable the image
+                heartImages[i].gameObject.SetActive(shouldBeActive);
+                Debug.Log($"[HealthUI] Heart index {i} set to active: {shouldBeActive}");
             }
             else
             {
-                // Hide extra heart slots beyond max HP
-                heartImages[i].enabled = false;
+                Debug.LogWarning($"[HealthUI] Element at index {i} in heartImages list is NULL!");
             }
         }
     }
