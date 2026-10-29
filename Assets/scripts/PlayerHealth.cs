@@ -34,6 +34,13 @@ public class PlayerHealth : MonoBehaviour
         // Update UI
         UpdateHealthUI();
 
+
+        if (AudioManager.Instance != null)
+        {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.playerHitSound);
+        }
+
+
         // Flash sprite RED when hit
         StartCoroutine(DamageFlash());
 
