@@ -127,6 +127,12 @@ public class PoacherMovement : MonoBehaviour
         }
     }
 
+    if (AudioManager.Instance != null)
+    {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.poacherTelegraphSound);
+
+        
+    }
     if (playerHit)
     {
         Debug.Log("[Poacher] Player caught in attack line! Dealing damage!");
@@ -143,6 +149,9 @@ public class PoacherMovement : MonoBehaviour
     }
 
     // 4. Clear all red tile highlights
+    AudioManager.Instance.PlaySFX(AudioManager.Instance.playerHitSound);
+
+    
     if (TileHighlightManager.Instance != null)
     {
         TileHighlightManager.Instance.ClearHighlight();

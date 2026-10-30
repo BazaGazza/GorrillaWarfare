@@ -195,9 +195,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   enemyPrefab: {fileID: 7337834994850806792, guid: 9b45c66c6775247098574bb7b0399b27, type: 3}
   spawnOnStart: 1
-  initialEnemies: 2
-  spawnInterval: 10
-  maxEnemies: 5
+  initialEnemies: 5
+  spawnInterval: 5
+  maxEnemies: 10
 --- !u!4 &97254276
 Transform:
   m_ObjectHideFlags: 0
@@ -1847,6 +1847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 545519828}
   - component: {fileID: 545519827}
+  - component: {fileID: 545519829}
   m_Layer: 0
   m_Name: BoardBackground
   m_TagString: Untagged
@@ -1929,6 +1930,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545519829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545519826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c836cd2ecb07e4377835a100dee80908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  backgroundImage: {fileID: 545519827}
+  colorGradient:
+    serializedVersion: 2
+    key0: {r: 0.10466359, g: 0.19607843, b: 0.14579098, a: 1}
+    key1: {r: 0.116011046, g: 0.27058825, b: 0.14465651, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 64764
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  cycleSpeed: 0.5
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2703,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -589608171748026223, guid: b085f295678924372a3e6269c9735808, type: 3}
+  m_Sprite: {fileID: -3170250933544465882, guid: 7369dda3759114bae9dad0b247a9ae6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2679,7 +2724,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.078, y: 0.078, z: 0.078}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -2697,6 +2742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   gridPosition: {x: 0, y: 0}
+  lastPunchTime: -999
 --- !u!114 &1005226563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2730,7 +2776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1040073812
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2886,6 +2932,8 @@ MonoBehaviour:
   enemySpawnSound: {fileID: 8300000, guid: 5847536480a3f4d51bd9595766c1a505, type: 3}
   punchSound: {fileID: 8300000, guid: 0045563e153884612a7da56de2d9f49f, type: 3}
   poundSound: {fileID: 8300000, guid: ada921cc7c3704c9aa4c4c89aba7d4d9, type: 3}
+  gorrillamovement: {fileID: 8300000, guid: 6ef134582493f483a849f1b55fb7baa1, type: 3}
+  screamgorrilla: {fileID: 8300000, guid: 41d2ee61d6e834db8bca8512e7b60400, type: 3}
 --- !u!4 &1054056743
 Transform:
   m_ObjectHideFlags: 0

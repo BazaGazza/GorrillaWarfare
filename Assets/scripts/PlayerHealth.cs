@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (AudioManager.Instance != null)
         {
-        AudioManager.Instance.PlaySFX(AudioManager.Instance.playerHitSound);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.screamgorrilla);
         }
 
 
